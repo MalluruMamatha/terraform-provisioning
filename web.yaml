@@ -1,0 +1,11 @@
+- name: install nginx
+  hosts: all
+  become: yes
+  tasks:
+  - name: install nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: installed
+
+      # you got the ip adress of db instance ,you can do configuration 
+      # installing ansible
